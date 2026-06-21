@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-primary: #071827;
+  --color-secondary: #0F2D46;
+  --color-accent: #C9A86A;
+  --color-gold: #D8B26E;
+  --color-cream: #F8F7F4;
+  --color-medical: #F2F4F7;
+  --color-success-sage: #4F8A6A;
+  --color-luxury-bg: #FFFFFF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #071827;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A86A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D8B26E;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(15, 45, 70, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 106, 0.2);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 106, 0.15);
+}
+
+/* Luxury transitions */
+.transition-luxury {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Cinematic pulsing effect */
+@keyframes cinematic-pulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+.glow-ambient {
+  animation: cinematic-pulse 8s infinite ease-in-out;
+}
